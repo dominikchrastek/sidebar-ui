@@ -2,6 +2,7 @@
   "name": "signals",
   "version": "0.1.0",
   "private": true,
+  "repository": "https://github.com/dominikchrastek/lobsters.git",
   "dependencies": {
     "prop-types": "^15.6.2",
     "ramda": "^0.25.0",
