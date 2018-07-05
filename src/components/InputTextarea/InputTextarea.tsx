@@ -31,6 +31,7 @@ export default class InputTextarea extends React.PureComponent<Props> {
   public handleChange = (ev: React.ChangeEvent<HTMLTextAreaElement>) => {
     this.props.onChange(ev.target.value);
   };
+
   public render() {
     const {
       id,
