@@ -6,11 +6,15 @@ const Input = Line.withComponent("input").extend`
   border: none;
   padding: 0;
   background: initial;
+  box-sizing: border-box;
   width: 100%;
-  color: ${props => props.theme.color.gray2};
+  color: ${({ theme }) => theme.color.gray2};
 
   &:focus {
     outline: none;
+  }
+  ::placeholder {
+    color ${({ theme }) => theme.color.gray8}
   }
 `;
 

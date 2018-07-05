@@ -13,10 +13,15 @@ interface Props {
   marginTop?: number;
   marginBottom?: number;
   children: React.ReactNode;
+  className?: string;
 }
 
 const Card = (props: Props) => (
-  <StyledMargin marginBottom={props.marginBottom} marginTop={props.marginTop}>
+  <StyledMargin
+    className={props.className}
+    marginBottom={props.marginBottom}
+    marginTop={props.marginTop}
+  >
     {props.children}
   </StyledMargin>
 );

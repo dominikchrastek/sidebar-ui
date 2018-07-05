@@ -1,7 +1,7 @@
 import Margin from "../Margin/Margin";
 
 interface Props {
-  children: React.ReactNodeArray;
+  children: React.ReactNodeArray | React.ReactNode;
   marginBottom?: number;
   marginTop?: number;
   space?: number;

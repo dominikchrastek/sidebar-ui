@@ -14,6 +14,7 @@ interface Props {
   onChange: (value: string) => any;
   placeholder: string;
   icon?: string;
+  className?: string;
 }
 
 export default class InputText extends React.PureComponent<Props> {
@@ -26,10 +27,10 @@ export default class InputText extends React.PureComponent<Props> {
   };
 
   public render() {
-    const { id, value, placeholder, icon } = this.props;
+    const { id, value, placeholder, icon, className } = this.props;
 
     return (
-      <InputWrapper height={2.25} marginBottom={0}>
+      <InputWrapper height={2.25} marginBottom={0} className={className}>
         {/* i will use personally react-icons */}
         {icon && <Img src={icon} alt="" />}
         <Input

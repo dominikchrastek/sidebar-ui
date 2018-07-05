@@ -25,11 +25,7 @@ const BoxLine = styled<Props, "div">("div")`
       props.theme.baseLineScale,
       props.fontSize
     )}px;
-  font-size: ${props => {
-    /* tslint:disable */
-    console.log(props);
-    return props.fontSize * props.theme.baseFont;
-  }}px;
+  font-size: ${props => props.fontSize * props.theme.baseFont}px;
   margin-top: ${props =>
     rhythm.getBoxMargin(
       props.theme.baseFont,

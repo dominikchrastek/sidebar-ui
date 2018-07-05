@@ -6,13 +6,15 @@ import TextareaWrapper from "../../primitives/TextareaWrapper/TextareaWrapper";
 const Textarea = Input.withComponent("textarea").extend`
   resize: none;
   padding 18px;
+  min-height: 100px;
 `;
 
 interface Props {
   id: string;
   value: string;
   placeholder: string;
-  onChange: (ev: string) => any;
+  onChange: (value: string) => any;
+  onKeyDown?: (ev: any) => any;
   minHeight?: number;
   marginTop?: number;
   marginBottom?: number;
@@ -37,7 +39,8 @@ export default class InputTextarea extends React.PureComponent<Props> {
       marginBottom,
       minHeight,
       value,
-      placeholder
+      placeholder,
+      onKeyDown
     } = this.props;
 
     return (
@@ -50,6 +53,7 @@ export default class InputTextarea extends React.PureComponent<Props> {
         <Textarea
           id={id}
           onChange={this.handleChange}
+          onKeyDown={onKeyDown}
           value={value}
           placeholder={placeholder}
         />

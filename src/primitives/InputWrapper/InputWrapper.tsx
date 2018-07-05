@@ -8,6 +8,7 @@ const InputWrapper = Box.extend`
   justify-content: center;
   padding: 0 ${props => props.theme.baseFont}px;
   border: 1px solid ${props => props.theme.color.gray3};
+  background: ${props => props.theme.color.white}
   border-radius: 3px;
   position: relative;
   cursor: text;
@@ -20,7 +21,7 @@ InputWrapper.propTypes = {
 };
 
 InputWrapper.defaultProps = {
-  height: 2.125,
+  height: 2.25,
   marginTop: 0,
   marginBottom: 0
 };
