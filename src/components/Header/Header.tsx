@@ -74,7 +74,7 @@ const Header = ({ onBack }: Props) => (
       <Empty />
     )}
     <Logo src={logo} alt="Logo" />
-    <span />
+    <Empty />
   </Container>
 );
 
