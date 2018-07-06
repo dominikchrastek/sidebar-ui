@@ -1,39 +1,50 @@
 import * as React from "react";
-import { Separator } from "./components";
-import { Line, Margin } from "./primitives";
-import Root from "./Root";
+import { Button, Sidebar } from "./components";
+import { Page } from "./data";
+import { Flex } from "./primitives";
 import styled from "./theme/";
 
 const Bg = styled.div`
-  background-color: ${props => props.theme.color.gray4};
+  background-color: ${props => props.theme.color.white};
   width: 100%;
   min-height: 100%;
 `;
 
-const Container = Margin.extend`
-  max-width: 450px;
-  text-align: center;
-  padding: 0 24px;
-`;
+interface State {
+  isOpen: boolean;
+  page: Page;
+}
+class App extends React.Component<{}, State> {
+  public state = {
+    isOpen: true,
+    page: Page.DASHBOARD
+  };
 
-const StyledSeparator = Separator.extend`
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 158px;
-`;
+  public handleSelectItem = (page: Page) => {
+    this.setState({ page });
+  };
 
-class App extends React.Component {
+  public handleToggleSidebar = () => {
+    this.setState(state => ({
+      isOpen: !state.isOpen
+    }));
+  };
   public render() {
     return (
       <Bg>
-        <Root />
-        <Container center={true}>
-          <StyledSeparator marginTop={1} />
-          <Line color="gray3" marginBottom={2}>
-            LobsterChat app design created by Artur Muller. Lobster icon created
-            by Ingmar Zawadzki from the Noun Project.
-          </Line>
-        </Container>
+        <Flex x="space-between">
+          <Sidebar
+            isOpen={this.state.isOpen}
+            onToggle={this.handleToggleSidebar}
+            onSelect={this.handleSelectItem}
+            page={this.state.page}
+          />
+
+          <div>
+            {this.state.page}
+            <Button onClick={this.handleToggleSidebar}>toggle sidebar</Button>
+          </div>
+        </Flex>
       </Bg>
     );
   }

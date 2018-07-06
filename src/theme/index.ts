@@ -10,6 +10,7 @@ export const color = {
   red2: "#b5281a",
   red3: "#a52215",
   white: "#fff",
+  black: "#000",
   gray1: "#d5d5d5",
   gray2: "#434343",
   gray3: "#d5d5d5",
@@ -27,6 +28,10 @@ export const theme = {
   color
 };
 
+const withProps = <U>() => <P, T, O>(
+  fn: styledComponents.ThemedStyledFunction<P, T, O>
+): styledComponents.ThemedStyledFunction<P & U, T, O & U> => fn;
+
 const {
   default: styled,
   css,
@@ -38,4 +43,4 @@ const {
 >;
 
 export default styled;
-export { css, injectGlobal, keyframes, ThemeProvider };
+export { css, injectGlobal, keyframes, ThemeProvider, withProps };

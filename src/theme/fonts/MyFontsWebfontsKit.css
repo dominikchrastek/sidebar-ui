@@ -1,0 +1,44 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3576591, 2018-05-08T04:25:42-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: AvenirLTPro-Medium by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/avenir/pro-65-medium-115678/
+ * 
+ * Webfont: AvenirLTPro-Heavy by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/avenir/pro-85-heavy-115678/
+ * 
+ * 
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3576591
+ * Licensed pageviews: 250,000
+ * Webfonts copyright: Copyright &#x00A9; 2014 Monotype GmbH. All rights reserved.
+ * 
+ * © 2018 MyFonts Inc
+*/
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/36930f");
+
+@font-face {
+  font-family: "AvenirLTPro-Medium";
+  src: url("webfonts/36930F_0_0.eot");
+  src: url("webfonts/36930F_0_0.eot?#iefix") format("embedded-opentype"),
+    url("webfonts/36930F_0_0.woff2") format("woff2"),
+    url("webfonts/36930F_0_0.woff") format("woff"),
+    url("webfonts/36930F_0_0.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "AvenirLTPro-Heavy";
+  src: url("webfonts/36930F_1_0.eot");
+  src: url("webfonts/36930F_1_0.eot?#iefix") format("embedded-opentype"),
+    url("webfonts/36930F_1_0.woff2") format("woff2"),
+    url("webfonts/36930F_1_0.woff") format("woff"),
+    url("webfonts/36930F_1_0.ttf") format("truetype");
+}

@@ -2,9 +2,9 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import "./index.css";
 import registerServiceWorker from "./registerServiceWorker";
 import { injectGlobal, theme, ThemeProvider } from "./theme";
+import "./theme/fonts/MyFontsWebfontsKit.css";
 
 // ¯\_(ツ)_/¯
 /* tslint:disable */
@@ -15,7 +15,7 @@ injectGlobal`
   }
 
   body {
-    font-family: PTSans;
+    font-family: AvenirLTPro-Medium;
   }
 
   * {

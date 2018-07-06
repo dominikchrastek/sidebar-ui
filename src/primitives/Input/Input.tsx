@@ -8,13 +8,16 @@ const Input = Line.withComponent("input").extend`
   background: initial;
   box-sizing: border-box;
   width: 100%;
-  color: ${({ theme }) => theme.color.gray2};
-
+  letter-spacing: 0.7px;
+  color: ${({ theme }) => theme.color.white};
+  font-weight: 500;
   &:focus {
     outline: none;
   }
   ::placeholder {
-    color ${({ theme }) => theme.color.gray8}
+    color ${({ theme }) => theme.color.white};
+    opacity: 0.52;
+    font-weight: 500;
   }
 `;
 
@@ -25,7 +28,7 @@ Input.propTypes = {
 };
 
 Input.defaultProps = {
-  fontSize: 1,
+  fontSize: 0.8125,
   marginTop: 0,
   marginBottom: 0
 };

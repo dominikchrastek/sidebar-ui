@@ -5,13 +5,14 @@ import Input from "../../primitives/Input/Input";
 import InputWrapper from "../../primitives/InputWrapper/InputWrapper";
 
 const Img = styled.img`
-  margin-right: 22px;
+  margin-right: 4px;
 `;
 
 interface Props {
   id: string;
   value: string;
   onChange: (value: string) => any;
+  onClick?: () => any;
   placeholder: string;
   icon?: string;
   className?: string;
@@ -27,11 +28,16 @@ export default class InputText extends React.PureComponent<Props> {
   };
 
   public render() {
-    const { id, value, placeholder, icon, className } = this.props;
+    const { id, value, placeholder, icon, className, onClick } = this.props;
 
     return (
-      <InputWrapper height={2.25} marginBottom={0} className={className}>
-        {/* i will use personally react-icons */}
+      <InputWrapper
+        htmlFor={id}
+        height={1.5}
+        marginBottom={0}
+        className={className}
+        onClick={onClick}
+      >
         {icon && <Img src={icon} alt="" />}
         <Input
           id={id}

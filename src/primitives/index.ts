@@ -5,4 +5,3 @@ export { default as Input } from "./Input/Input";
 export { default as InputWrapper } from "./InputWrapper/InputWrapper";
 export { default as Line } from "./Line/Line";
 export { default as Margin } from "./Margin/Margin";
-export { default as TextareaWrapper } from "./TextareaWrapper/TextareaWrapper";

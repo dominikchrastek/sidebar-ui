@@ -1,17 +1,16 @@
 import PropTypes from "prop-types";
-
 import Box from "../Box/Box";
 
-const InputWrapper = Box.extend`
+const InputWrapper = Box.withComponent("label").extend`
   width: 100%;
   display: flex;
-  justify-content: center;
-  padding: 0 ${props => props.theme.baseFont}px;
-  border: 1px solid ${props => props.theme.color.gray3};
-  background: ${props => props.theme.color.white}
-  border-radius: 3px;
+  align-itmes center;
+  padding: 0 3px;
+  background: rgba(0, 0, 0, 0.17);
+  border-radius: 2px;
   position: relative;
   cursor: text;
+  overflow: hidden;
 `;
 
 InputWrapper.propTypes = {
