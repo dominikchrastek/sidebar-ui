@@ -13,6 +13,7 @@ const Title = Line.extend`
   opacity: 0.21;
   text-transform: uppercase;
   color: ${({ theme }) => theme.color.white};
+  word-break: keep-all;
 `;
 
 const Hr = styled(Margin.withComponent("hr"))`

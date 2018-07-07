@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Button, Sidebar } from "./components";
 import { Page } from "./data";
-import { Flex } from "./primitives";
+import { Flex, Line } from "./primitives";
 import styled from "./theme/";
 
 const Bg = styled.div`
@@ -32,7 +32,7 @@ class App extends React.Component<{}, State> {
   public render() {
     return (
       <Bg>
-        <Flex x="space-between">
+        <Flex x="space-between" style={{ height: "100%", minHeight: "100vh" }}>
           <Sidebar
             isOpen={this.state.isOpen}
             onToggle={this.handleToggleSidebar}
@@ -41,7 +41,7 @@ class App extends React.Component<{}, State> {
           />
 
           <div>
-            {this.state.page}
+            <Line>selected: {this.state.page}</Line>
             <Button onClick={this.handleToggleSidebar}>toggle sidebar</Button>
           </div>
         </Flex>

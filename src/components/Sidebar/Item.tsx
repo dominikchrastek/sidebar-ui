@@ -19,6 +19,7 @@ const Li = withProps<PropsLi>()(styled(Flex.withComponent("li")))`
   padding-bottom: 4px;
   transition: padding 600ms cubic-bezier(0.19, 1, 0.22, 1);
   overflow: hidden;
+  word-break: keep-all;
   ${({ isSidebarOpen }) =>
     !isSidebarOpen &&
     `

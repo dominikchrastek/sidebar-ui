@@ -32,12 +32,8 @@ interface Props {
 
 const Flex = Margin.extend<Props>`
   display: flex;
-  ${props =>
-    props.x &&
-    `justify-content: ${props.direction === "column" ? props.y : props.x}`};
-  ${props =>
-    props.y &&
-    `align-items: ${props.direction === "column" ? props.x : props.y}`};
+  ${props => props.x && `justify-content: ${props.x}`};
+  ${props => props.y && `align-items: ${props.y}`};
   ${props => props.direction && `flex-direction: ${props.direction}`};
   & > *:not(:last-child) {
     ${props => props.space && `margin-right: ${props.space}px`};
