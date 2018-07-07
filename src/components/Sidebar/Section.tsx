@@ -39,7 +39,7 @@ const Section = (props: Props) => (
         <Hr center={true} marginBottom={12 / 24} marginTop={22 / 24} />
       </Flex>
     )}
-    {props.children}
+    <ul>{props.children}</ul>
   </>
 );
 
